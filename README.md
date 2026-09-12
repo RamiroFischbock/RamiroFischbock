@@ -30,6 +30,11 @@ Diseño, desarrollo y mantenimiento completos.
 *Python (stdlib), SQLite en modo WAL, React por CDN sin build, pyodbc contra SQL
 Server, Cloudflare Tunnel.*
 
+> 📦 **[conciliacion-bancaria](https://github.com/RamiroFischbock/conciliacion-bancaria)** —
+> el motor de conciliación, extraído y generalizado. Incluye el incidente real
+> que hizo cambiar el diseño: por qué una tolerancia porcentual casi da por
+> pagada la deuda de quien no pagó.
+
 ### Radar · asistente de trabajo propio
 
 Lee mi casilla por IMAP en **solo lectura**, arma tareas por proyecto, y me habla
