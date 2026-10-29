@@ -2,6 +2,7 @@ import {Composition} from 'remotion';
 import {VERTICAL} from './brand';
 import {ReelServicios, reelServiciosSchema} from './reels/ReelServicios';
 import {DURACION_ESTETICO, ReelEstetico, reelEsteticoSchema} from './reels/ReelEstetico';
+import {duracionReelFiestas, ReelFiestas, reelFiestasSchema} from './reels/ReelFiestas';
 import {duracionReelLimpieza, ReelLimpieza, reelLimpiezaSchema} from './reels/ReelLimpieza';
 
 export const Root: React.FC = () => (
@@ -64,6 +65,26 @@ export const Root: React.FC = () => (
         carrusel: ['clips/clip13.mp4', 'clips/clip8.mp4', 'clips/clip9.mp4', 'clips/clip7.mp4', 'clips/clip3.mp4', 'clips/clip11.mp4'],
         fraseFinal: 'Piel que\nrespira',
         cierre: 'Tu momento',
+      }}
+    />
+    <Composition
+      id="ReelFiestas"
+      component={ReelFiestas}
+      durationInFrames={1}
+      calculateMetadata={({props}) => ({durationInFrames: duracionReelFiestas(props)})}
+      {...VERTICAL}
+      schema={reelFiestasSchema}
+      defaultProps={{
+        hook: ['¿Piel perfecta', 'para las fiestas?'],
+        hookClip: 'clips/clip13.mp4',
+        meses: ['Octubre', 'Noviembre', 'Diciembre'],
+        montaje: [
+          {palabra: 'Limpiar', clip: 'clips/clip2.mp4'},
+          {palabra: 'Renovar', clip: 'clips/clip4.mp4'},
+          {palabra: 'Hidratar', clip: 'clips/clip5.mp4'},
+          {palabra: 'Brillar', clip: 'clips/clip10.mp4'},
+        ],
+        hoyClip: 'clips/clip9.mp4',
       }}
     />
   </>
