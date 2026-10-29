@@ -3,6 +3,7 @@ import {AbsoluteFill, Img, interpolate, Sequence, staticFile, useCurrentFrame} f
 import {colors, sans, serif} from '../brand';
 import {Fondo} from '../components/Fondo';
 import {Aparece} from '../components/Aparece';
+import {Fuentes} from '../components/Fuentes';
 
 export const reelServiciosSchema = z.object({
   titulo: z.string(),
@@ -63,6 +64,7 @@ const Cierre: React.FC<{cierre: string}> = ({cierre}) => (
 export const ReelServicios: React.FC<z.infer<typeof reelServiciosSchema>> = ({titulo, subtitulo, servicios, cierre}) => (
   <AbsoluteFill>
     <Fondo />
+    <Fuentes />
     <Sequence durationInFrames={SEG}><Intro titulo={titulo} subtitulo={subtitulo} /></Sequence>
     {servicios.map((s, i) => (
       <Sequence key={s.nombre} from={SEG * (i + 1)} durationInFrames={SEG}>

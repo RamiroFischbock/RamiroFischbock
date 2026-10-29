@@ -1,4 +1,3 @@
-import {loadFont} from '@remotion/fonts';
 import {staticFile} from 'remotion';
 
 // Paleta y tipografías tomadas de nekobloom.vercel.app
@@ -22,8 +21,13 @@ const fuentes: [string, string, string, string][] = [
   [sans, 'inter-latin-300-normal', '300', 'normal'],
   [sans, 'inter-latin-400-normal', '400', 'normal'],
 ];
-for (const [family, file, weight, style] of fuentes) {
-  loadFont({family, url: staticFile(`fonts/${file}.woff2`), weight, style});
-}
+// CSS @font-face para inyectar en cada composición (ver components/Fuentes.tsx)
+export const fontFaceCss = fuentes
+  .map(([family, file, weight, style]) =>
+    `@font-face{font-family:'${family}';src:url(${staticFile(`fonts/${file}.woff2`)}) format('woff2');font-weight:${weight};font-style:${style};font-display:block}`,
+  )
+  .join('\n');
+
+export const fuentesCargar = fuentes.map(([family, , weight, style]) => `${style} ${weight} 40px '${family}'`);
 
 export const VERTICAL = {width: 1080, height: 1920, fps: 30};
