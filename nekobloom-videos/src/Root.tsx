@@ -3,6 +3,7 @@ import {VERTICAL} from './brand';
 import {ReelServicios, reelServiciosSchema} from './reels/ReelServicios';
 import {DURACION_ESTETICO, ReelEstetico, reelEsteticoSchema} from './reels/ReelEstetico';
 import {duracionReelFiestas, ReelFiestas, reelFiestasSchema} from './reels/ReelFiestas';
+import {DURACION_PROGRAMA, ReelPrograma, reelProgramaSchema} from './reels/ReelPrograma';
 import {duracionReelLimpieza, ReelLimpieza, reelLimpiezaSchema} from './reels/ReelLimpieza';
 
 export const Root: React.FC = () => (
@@ -85,6 +86,28 @@ export const Root: React.FC = () => (
           {palabra: 'Brillar', clip: 'clips/clip10.mp4'},
         ],
         hoyClip: 'clips/clip9.mp4',
+      }}
+    />
+    <Composition
+      id="ReelPrograma"
+      component={ReelPrograma}
+      durationInFrames={DURACION_PROGRAMA}
+      {...VERTICAL}
+      schema={reelProgramaSchema}
+      defaultProps={{
+        programa: 'Piel de\nFiestas',
+        temporada: 'Noviembre · Diciembre',
+        escenas: [
+          {clip: 'clips/clip14.mp4', corte: 270, titulo: 'Las fiestas\nse acercan', bajada: 'y tu piel merece llegar luminosa'},
+          {clip: 'clips/clip13.mp4', corte: 470, titulo: 'La piel no se transforma\nen pocos días', bajada: 'se prepara con tiempo y constancia'},
+        ],
+        pasos: [
+          {clip: 'clips/clip2.mp4', corte: 240, titulo: 'Limpiar', bajada: 'purificar en profundidad'},
+          {clip: 'clips/clip4.mp4', corte: 300, titulo: 'Renovar', bajada: 'microdermoabrasión'},
+          {clip: 'clips/clip5.mp4', corte: 480, titulo: 'Hidratar', bajada: 'ice globes'},
+          {clip: 'clips/clip15.mp4', corte: 480, titulo: 'Iluminar', bajada: 'masaje facial'},
+        ],
+        remate: ['No lo dejes para último momento.', 'El mejor momento', 'para empezar es'],
       }}
     />
   </>

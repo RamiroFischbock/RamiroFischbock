@@ -16,5 +16,7 @@ Composiciones:
   (push-in, paneos, dolly) y transiciones zoom/whip/flip/luz, carrusel 3D, logo con giro + CTA. Grano y viñeta.
 - `ReelFiestas` (~15 s): gancho "¿piel perfecta para las fiestas?", almanaque 3D oct→dic, cortes
   Limpiar/Renovar/Hidratar/Brillar, "el mejor momento para empezar es hoy", placa NekoBloom.
+- `ReelPrograma` (~22 s): "Programa Piel de Fiestas", estética old money/boutique (papel crema, doble filete,
+  versalitas). Tomas en ventana con el borde superior fundido al papel (`corte` por clip esconde la mesa).
   Los clips (`public/clips/`) no se versionan: salen de los .mov del iPhone (HDR HLG)
   convertidos a SDR 1080x1920 con ffmpeg (`zscale` + `tonemap=hable:desat=2`).

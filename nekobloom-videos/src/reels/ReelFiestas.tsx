@@ -125,7 +125,7 @@ const Hoy: React.FC<{clip: string}> = ({clip}) => {
 };
 
 // Placa final NekoBloom Studio
-const Placa: React.FC = () => {
+export const Placa: React.FC = () => {
   const f = useCurrentFrame();
   const {fps} = useVideoConfig();
   const e = spring({frame: f, fps, config: {damping: 14}});

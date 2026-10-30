@@ -8,6 +8,7 @@ export const colors = {
   rose: '#d9a4a0',
   blush: '#e8c5c0',
   ink: '#2b2622',
+  taupe: '#a8916c',
 };
 
 export const serif = 'Cormorant Garamond';
